@@ -1,6 +1,6 @@
 // import axios from "axios";
 // import fileDownload from "js-file-download";
-import cv from 'cv.pdf'
+import cv from '/cv.pdf'
 
 
 const Navbar = ({ children }) => {
