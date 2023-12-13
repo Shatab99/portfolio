@@ -1,6 +1,6 @@
 // import axios from "axios";
 // import fileDownload from "js-file-download";
-import cv from '../assets/Cv/cv.pdf'
+import cv from 'cv.pdf'
 
 
 const Navbar = ({ children }) => {
@@ -30,7 +30,7 @@ const Navbar = ({ children }) => {
                     </div>
                     <div className="justify-end">
                         {/*  */}
-                        <a href={cv} download={'cv.pdf'}><button className="btn bg-orange-600 text-white hover:text-black border-0">Download CV</button></a>
+                        <a href={cv} download={cv} className="btn bg-orange-600 text-white hover:text-black border-0">Download CV</a>
                     </div>
                 </div>
                 {children}

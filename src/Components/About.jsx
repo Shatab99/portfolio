@@ -15,7 +15,7 @@ const About = () => {
                 <div className='max-w-xs'>
                     <h1 className="text-3xl font-bold">About <span className='text-orange-700'>Me</span></h1>
                     <div className="divider my-0"></div>
-                    <p className='text-gray-600 font-semibold' >Hi , I am Md Shahriar Shatab.Basicaly I am a MERN Stack developer . I usualy design in React for fron end . For Backend I use express and mongo db . My vision is to be a good and honest person.
+                    <p className='text-gray-600 font-semibold' >Hi , I am Md Shahriar Shatab.Basicaly I am a MERN Stack developer . I usualy design in React for front end . For Backend I use express and mongo db . My vision is to be a good and honest person.
                     Maybe I am not a good technical guy but I have a dedication in this sector and I try to make myself in discipline .</p>
                 </div>
             </div>
