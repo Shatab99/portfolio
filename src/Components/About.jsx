@@ -1,15 +1,13 @@
-import me from '../assets/images/me.jpg'
+import me from '../assets/images/me.png'
 
 const About = () => {
     return (
         <div id='about' className="my-12 max-w-3xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-center">
                 <div
-                    data-aos="fade-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine"
+                   
                 >
-                    <img src={me} alt="" className='w-64 h-64 rounded-full' />
+                    <img src={me} alt="" className='w-64 h-64' />
                 </div>
                 <div className='divider lg:divider-horizontal divider-warning'></div>
                 <div className='max-w-xs'>

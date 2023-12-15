@@ -1,7 +1,8 @@
 // import axios from "axios";
 // import fileDownload from "js-file-download";
-import cv from '/cv.pdf'
 
+import { FaUserTie } from "react-icons/fa";
+import HireMeForm from "./HireMeForm";
 
 const Navbar = ({ children }) => {
 
@@ -30,7 +31,8 @@ const Navbar = ({ children }) => {
                     </div>
                     <div className="justify-end">
                         {/*  */}
-                        <a href={cv} download={cv} className="btn bg-orange-600 text-white hover:text-black border-0">Download CV</a>
+                        <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn bg-orange-600 text-white hover:text-black border-0"><FaUserTie className="text-lg"/> Hire Me </button>
+                        <HireMeForm/>
                     </div>
                 </div>
                 {children}

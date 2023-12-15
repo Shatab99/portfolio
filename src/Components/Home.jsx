@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Footer from "./Footer";
+import Bubbles from "./Bubbles";
 
 
 const Home = () => {
@@ -36,6 +37,7 @@ const Home = () => {
             <Navbar>
                 <Banner />
                 <About />
+                <Bubbles/>
                 <CvModal/>
                 <Skills/>
                 <Projects/>
