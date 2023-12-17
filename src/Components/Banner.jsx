@@ -17,10 +17,10 @@ const Banner = () => {
                     <Lottie animationData={webportfolio} className="max-w-lg " />
                     <div className='lg:w-[650px]'>
                         <h1 className="text-2xl font-bold">Hi There ,</h1>
-                        <h1 className="text-5xl font-bold">I am <Typewriter
+                        <h1 className="text-5xl font-bold">I am <span className='text-orange-600'>M</span><Typewriter
                             loop={0}
-                            words={['MD Shahriar Shatab',
-                                `MERN Stack Developer`
+                            words={['D Shahriar Shatab',
+                                `ERN Stack Developer`
                             ]}
                             typeSpeed={60}
                         /></h1>
