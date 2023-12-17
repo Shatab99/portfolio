@@ -14,8 +14,8 @@ const Banner = () => {
             <div className="hero min-h-screen bg-base-200 " style={{ backgroundImage: `url(${banner})` }}>
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <Lottie animationData={webportfolio} className="max-w-lg" />
-                    <div>
+                    <Lottie animationData={webportfolio} className="max-w-lg " />
+                    <div className='lg:w-[650px]'>
                         <h1 className="text-2xl font-bold">Hi There ,</h1>
                         <h1 className="text-5xl font-bold">I am <Typewriter
                             loop={0}
