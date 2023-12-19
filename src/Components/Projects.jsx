@@ -30,6 +30,8 @@ const Projects = () => {
                             <h1 className='text-2xl font-semibold'>Online Restaurent </h1>
                             <p className='text-xs font-semibold text-gray-500'>
                                 An online restaurant webpage serves as the digital storefront for your culinary establishment. It typically includes a welcoming homepage featuring high-quality images of the restaurant and its signature dishes, along with prominent calls-to-action for menu exploration and reservations. The menu section organizes culinary offerings into categories, providing enticing descriptions and prices. A gallery showcases the {`restaurant's`} ambiance and delectable creations, complemented by positive testimonials and any accolades.</p>
+
+                            <p className='font-bold text-red-800'>Contains Admin Login </p>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -55,7 +57,7 @@ const Projects = () => {
                     <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center" data-aos="flip-left">
                         <InfiniteScroll dataLength={8} height={300}>
                             <a href="https://erratic-houses.surge.sh/" target='_blank'>
-                                <img src={web3} alt="" className='w-60 ' />
+                                <img src={web3} alt="" className='w-60' />
                             </a>
                         </InfiniteScroll>
                         <div className='lg:divider lg:divider-horizontal lg:divider-warning'></div>
@@ -63,6 +65,7 @@ const Projects = () => {
                             <h1 className='text-2xl font-semibold'>Biya Shaadi .com  </h1>
                             <p className='text-xs font-semibold text-gray-500'>
                                 In the modern era, love stories aren't confined to handwritten letters or whispered secrets. They find a new home on the digital stage through the enchanting world of marriage websites. As couples embark on the journey towards matrimony, they're increasingly turning to the web to weave their narratives and share the excitement of their upcoming nuptials.</p>
+                            <p className='font-bold text-red-800'>Contains Admin Login </p>
                         </div>
                     </div>
                 </SwiperSlide>
