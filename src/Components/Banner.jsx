@@ -1,7 +1,7 @@
 import banner from '../assets/images/banner2.jpg'
 import cv from '/cv.pdf'
 import Lottie from "lottie-react";
-import webportfolio from '../assets/animation/Animation-webportfolio2.json'
+import webportfolio from '../assets/animation/Animation-portfoiloNew.json'
 import { FaShareFromSquare } from "react-icons/fa6";
 import { GrDocumentUser } from "react-icons/gr";
 import SeeResume from './SeeResume';
