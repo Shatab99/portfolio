@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import webportfolio from '../assets/animation/Animation-portfoiloNew.json'
 import { FaShareFromSquare } from "react-icons/fa6";
 import { GrDocumentUser } from "react-icons/gr";
-import SeeResume from './SeeResume';
+// import SeeResume from './SeeResume';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
@@ -30,7 +30,7 @@ const Banner = () => {
                             <button onClick={() => document.getElementById('my_modal_5').showModal()} className='btn btn-outline text-orange-600'>
                                 See Resume <GrDocumentUser className='text-xl' />
                             </button>
-                            <SeeResume />
+                            {/* <SeeResume /> */}
                         </div>
                     </div>
                 </div>
