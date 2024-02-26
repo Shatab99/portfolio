@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import PrgressBar from "./PrgressBar";
+import Exprerience from "./Exprerience";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             <Navbar>
                 <Banner />
                 <About />
+                <Exprerience/>
                 <Skills />
                 <PrgressBar />
                 <Projects />
