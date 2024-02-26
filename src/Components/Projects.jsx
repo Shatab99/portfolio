@@ -14,12 +14,14 @@ import 'swiper/css/navigation';
 
 const Projects = () => {
     return (
-        <div id="projects" className="max-w-xs lg:max-w-4xl mx-auto mb-12">
+        <div id="projects" className="max-w-xs lg:max-w-4xl mx-auto mb-12 mt-4">
             <h1 className="text-3xl font-semibold">My Projects</h1>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 
                 <SwiperSlide>
-                    <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center" data-aos="flip-left">
+                    <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
+                        data-aos="flip-down"
+                    >
                         <InfiniteScroll dataLength={8} height={300}>
                             <a rel='noreferrer' href="https://lucky-pear.surge.sh/" target='_blank'>
                                 <img src={web1} alt="" className='w-60 ' />
@@ -53,10 +55,10 @@ const Projects = () => {
                             <h1 className='text-2xl font-semibold'>Food Share  </h1>
                             <p className='text-xs font-semibold text-gray-500'>
                                 This webapage hosts the codebase for our food share website project, which aims to help poor people. Our platform connects individuals and organizations with surplus food to those in need, promoting sustainability and community sharing.</p>
-                                <a rel='noreferrer' href="https://noxious-apples.surge.sh/" target='_blank' className='btn bg-orange-600 text-white hover:text-black mt-3'>
+                            <a rel='noreferrer' href="https://noxious-apples.surge.sh/" target='_blank' className='btn bg-orange-600 text-white hover:text-black mt-3'>
                                 Live Link <FaExternalLinkAlt />
                             </a>
-                                
+
                         </div>
                     </div>
                 </SwiperSlide>

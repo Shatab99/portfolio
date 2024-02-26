@@ -9,6 +9,7 @@ import Projects from "./Projects";
 import Footer from "./Footer";
 import PrgressBar from "./PrgressBar";
 import Exprerience from "./Exprerience";
+import FixedBg from "./FixedBg";
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className="">
             <Navbar>
                 <Banner />
                 <About />
@@ -27,6 +28,7 @@ const Home = () => {
                 <PrgressBar />
                 <Projects />
                 <Footer />
+                <FixedBg/>
             </Navbar>
         </div>
     );

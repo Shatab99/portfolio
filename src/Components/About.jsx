@@ -2,7 +2,7 @@ import me from '../assets/images/me.png'
 
 const About = () => {
     return (
-        <div id='about' className="my-12 max-w-3xl mx-auto">
+        <div id='about' className="my-12 max-w-3xl mx-auto z-[999]">
             <div className="flex flex-col lg:flex-row items-center justify-center">
                 <div
                    
