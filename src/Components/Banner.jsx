@@ -4,7 +4,6 @@ import Lottie from "lottie-react";
 import webportfolio from '../assets/animation/Animation-portfoiloNew.json'
 import { FaShareFromSquare } from "react-icons/fa6";
 import { GrDocumentUser } from "react-icons/gr";
-// import SeeResume from './SeeResume';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
@@ -27,10 +26,9 @@ const Banner = () => {
                         <p className="py-6 text-lg font-semibold"><span className='text-orange-600 font-extrabold'>MERN</span>  Stack Developer</p>
                         <div className='flex items-center gap-4'>
                             <a href={cv} download={cv} className="btn bg-orange-600 text-white hover:text-black border-0">Download CV <FaShareFromSquare className='text-lg' /></a>
-                            <button onClick={() => document.getElementById('my_modal_5').showModal()} className='btn btn-outline text-orange-600'>
+                            <a rel='noreferrer' href='https://drive.google.com/file/d/1hggXs4p6D0HU2gNRfvtcSmQU1-srNt08/view?usp=sharing' target='_blank' className='btn btn-outline text-orange-600'>
                                 See Resume <GrDocumentUser className='text-xl' />
-                            </button>
-                            {/* <SeeResume /> */}
+                            </a>
                         </div>
                     </div>
                 </div>
