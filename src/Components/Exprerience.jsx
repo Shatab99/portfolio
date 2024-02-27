@@ -43,7 +43,7 @@ const Exprerience = () => {
 
     return (
         <div className="max-w-3xl mx-auto space-y-5">
-            <h1 className="text-3xl font-bold text-center">My Experience </h1>
+            <h1 className="text-3xl font-bold text-center ">My Experience </h1>
             <div className="border-4 border-[#FFBE00] p-4 rounded-lg flex flex-col items-center gap-6 shadow-2xl ">
                 <div className="border-2 border-[#FFDE7F] p-4 rounded-lg flex flex-col items-center gap-3">
                     <p className="font-semibold">My Running Experience In <span className="font-bold text-[#EA580C]">MERN </span>Stack</p>
@@ -62,7 +62,7 @@ const Exprerience = () => {
                     </div>
                     <a href="#projects" title="See Projects" className="flex flex-col items-center hover:bg-slate-100 p-2 rounded-lg">
                         <p className="text-lg font-semibold">Number Of Full Stack Projects </p>
-                        <p className="text-2xl font-bold  text-[#D0410C]">4</p>
+                        <p className="text-2xl font-bold  text-[#D0410C]" >4</p>
                     </a>
                 </div>
             </div>

@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import PrgressBar from "./PrgressBar";
 import Exprerience from "./Exprerience";
 import FixedBg from "./FixedBg";
+import WelcomeModal from "./WelcomeModal";
 
 
 const Home = () => {
@@ -21,14 +22,15 @@ const Home = () => {
     return (
         <div className="">
             <Navbar>
+                <WelcomeModal />
                 <Banner />
                 <About />
-                <Exprerience/>
+                <Exprerience />
                 <Skills />
                 <PrgressBar />
                 <Projects />
                 <Footer />
-                <FixedBg/>
+                <FixedBg />
             </Navbar>
         </div>
     );
