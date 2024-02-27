@@ -28,17 +28,19 @@ export default function WelcomeModal() {
                 <div className="flex flex-col  gap-3">
                     <h1 className="text-2xl font-semibold text-center">Hi There, Welcome to my portfolio</h1>
                     <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-4">
-                        <div className="leading-7">
+                        <div className="leading-7" data-aos="zoom-out-up" data-aos-duration="2000">
                             <p>As a junior MERN Stack developer , I can offer you to build you SPA{'(Single Page Application)'} project .</p>
                             <p>So , {`let's`} have a cup of coffee on google meet . You can  <a onClick={() => setIsOpen(false)} href="#footer" className="font-semibold text-orange-600 hover:text-orange-800">contact me clicking here</a> through  filling the contact me form </p>
                             <div className="flex items-center justify-start gap-3 mt-5">
                                 <button onClick={() => document.getElementById('my_modal_3').showModal()} className="btn btn-sm bg-orange-600 text-white hover:text-black border-0"><FaUserTie className="text-lg" /> Hire Me </button>
                                 <button onClick={() => setIsOpen(false)} className="btn btn-sm btn-outline text-orange-600   border-2">May Be later ! </button>
-                                
+
                             </div>
                         </div>
                         <div className='divider lg:divider-horizontal divider-warning'></div>
-                        <img src={me} alt="" className='w-64 h-64' />
+                        <div data-aos="zoom-in-left" data-aos-duration="2000" className="w-2/3">
+                            <img src={me} alt="" className='w-64 h-64'  />
+                        </div>
                     </div>
                 </div>
             </Modal>
