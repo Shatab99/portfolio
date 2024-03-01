@@ -37,6 +37,7 @@ export default function WelcomeModal({top}) {
                             <div className="flex items-center justify-start gap-3 mt-5">
                                 <button onClick={() => {
                                     document.getElementById('my_modal_3').showModal();
+                                    setIsOpen(false);
                                 }} className="btn btn-sm bg-orange-600 text-white hover:text-black border-0"><FaUserTie className="text-lg" /> Hire Me </button>
                                 <button onClick={() => {
                                     setIsOpen(false);
