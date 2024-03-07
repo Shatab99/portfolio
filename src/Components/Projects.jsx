@@ -5,6 +5,7 @@ import web3 from '../assets/images/webpage3.png'
 import web4 from '../assets/images/webpage4.png'
 import uiUxImg from '../assets/images/Uiux-1.png'
 import uiUxImg2 from '../assets/images/Uiux-2.png'
+import frontEndImg1 from '../assets/images/frontEndImg1.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -72,6 +73,22 @@ const projects = [
         img: uiUxImg2,
         liveLink: 'https://www.figma.com/file/jiN8km6lb42MuKBPTi8Jma/UI-of-Ride-Share-app?type=design&node-id=0%3A1&mode=design&t=Zkf8buHW3pD90Q8z-1'
     },
+    {
+        title: 'Dragon News -UI and Authentication ',
+        category: 'Frontend Projects',
+        description: "Designing a news portal using React involves creating a dynamic and responsive web application that delivers timely and engaging content to users. The foundation of the portal lies in its homepage, which serves as the central hub for accessing a diverse range of news articles and features. Through React's component-based architecture, developers can design a modular homepage layout that showcases top stories, breaking news, and featured articles in an organized and visually appealing manner. Leveraging React's state management capabilities, the portal can display real-time updates and notifications to keep users informed of the latest developments",
+        admin: false,
+        img: frontEndImg1,
+        liveLink: 'http://five-building.surge.sh/'
+    },
+    {
+        title: 'Task Manager -Only User Redux Here ',
+        category: 'Redux Projects',
+        description: "Designing a news portal using React involves creating a dynamic and responsive web application that delivers timely and engaging content to users. The foundation of the portal lies in its homepage, which serves as the central hub for accessing a diverse range of news articles and features. Through React's component-based architecture, developers can design a modular homepage layout that showcases top stories, breaking news, and featured articles in an organized and visually appealing manner. Leveraging React's state management capabilities, the portal can display real-time updates and notifications to keep users informed of the latest developments",
+        admin: false,
+        img: frontEndImg1,
+        liveLink: 'http://five-building.surge.sh/'
+    },
 ]
 
 const Projects = () => {
@@ -84,6 +101,7 @@ const Projects = () => {
     const frontEnds = projects.filter(project => project.category === 'Frontend Projects')
     const backEnds = projects.filter(project => project.category === 'Backend Projects')
     const uiUx = projects.filter(project => project.category === 'UiUx Design')
+    const redux = projects.filter(project => project.category === 'Redux Projects')
 
 
     return (
@@ -127,43 +145,40 @@ const Projects = () => {
                 }
 
                 {
-                    selected?.name === 'Frontend Projects' ?
-                        frontEnds.length === 0 ? <div className='flex justify-center my-12 '>
-                            <p className='text-5xl font-bold animate-bounce'>Projects Comming Soon</p>
-                    </div> :
-                        frontEnds?.map(project => <>
-                            <SwiperSlide>
-                                <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
-                                    data-aos="flip-down"
-                                >
-                                    <InfiniteScroll dataLength={8} height={300}>
-                                        <a rel='noreferrer' href={project.liveLink} target='_blank'>
-                                            <img src={project.img} alt="" className='w-60 ' />
-                                        </a>
-                                    </InfiniteScroll>
-                                    <div className='lg:divider lg:divider-horizontal lg:divider-warning'></div>
-                                    <div className='max-w-xs flex flex-col gap-2'>
-                                        <h1 className='text-2xl font-semibold'>{project.title} </h1>
-                                        <p className='text-xs font-semibold text-gray-500'>
-                                            {project.description}
-                                        </p>
+                    selected?.name === 'Frontend Projects' &&
+                    frontEnds?.map(project => <>
+                        <SwiperSlide>
+                            <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
+                                data-aos="flip-down"
+                            >
+                                <InfiniteScroll dataLength={8} height={300}>
+                                    <a rel='noreferrer' href={project.liveLink} target='_blank'>
+                                        <img src={project.img} alt="" className='w-60 ' />
+                                    </a>
+                                </InfiniteScroll>
+                                <div className='lg:divider lg:divider-horizontal lg:divider-warning'></div>
+                                <div className='max-w-xs flex flex-col gap-2'>
+                                    <h1 className='text-2xl font-semibold'>{project.title} </h1>
+                                    <p className='text-xs font-semibold text-gray-500'>
+                                        {project.description}
+                                    </p>
 
-                                        {
-                                            project.admin && <p className='font-bold text-red-800'>Contains with Admin panel </p>
-                                        }
-                                        <a rel='noreferrer' href={project.liveLink} target='_blank' className='btn bg-orange-600 text-white hover:text-black mt-3'>
-                                            Live Link <FaExternalLinkAlt />
-                                        </a>
-                                    </div>
+                                    {
+                                        project.admin && <p className='font-bold text-red-800'>Contains with Admin panel </p>
+                                    }
+                                    <a rel='noreferrer' href={project.liveLink} target='_blank' className='btn bg-orange-600 text-white hover:text-black mt-3'>
+                                        Live Link <FaExternalLinkAlt />
+                                    </a>
                                 </div>
+                            </div>
 
-                            </SwiperSlide>
-                        </>) : <p></p>
+                        </SwiperSlide>
+                    </>)
                 }
                 {
                     selected?.name === 'Backend Projects' &&
                         backEnds.length === 0 ? <div className='flex justify-center my-12 '>
-                            <p className='text-5xl font-bold animate-bounce'>Projects Comming Soon</p>
+                        <p className='text-5xl font-bold animate-bounce'>Projects Comming Soon</p>
                     </div> :
                         backEnds?.map(project => <>
                             <SwiperSlide>
@@ -196,34 +211,42 @@ const Projects = () => {
                 }
                 {
                     selected?.name === 'UiUx Design' &&
-                        uiUx?.map(project => <>
-                            <SwiperSlide>
-                                <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
-                                    data-aos="flip-down"
-                                >
-                                    <InfiniteScroll dataLength={8}  >
-                                        <a rel='noreferrer' href={project.liveLink} target='_blank'>
-                                            <img src={project.img} alt="" className='w-60 ' />
-                                        </a>
-                                    </InfiniteScroll>
-                                    <div className='lg:divider lg:divider-horizontal lg:divider-warning'></div>
-                                    <div className='max-w-xs flex flex-col gap-2'>
-                                        <h1 className='text-2xl font-semibold'>{project.title} </h1>
-                                        <p className='text-xs font-semibold text-gray-500'>
-                                            {project.description}
-                                        </p>
+                    uiUx?.map(project => <>
+                        <SwiperSlide>
+                            <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
+                                data-aos="flip-down"
+                            >
+                                <InfiniteScroll dataLength={8}  >
+                                    <a rel='noreferrer' href={project.liveLink} target='_blank'>
+                                        <img src={project.img} alt="" className='w-60 ' />
+                                    </a>
+                                </InfiniteScroll>
+                                <div className='lg:divider lg:divider-horizontal lg:divider-warning'></div>
+                                <div className='max-w-xs flex flex-col gap-2'>
+                                    <h1 className='text-2xl font-semibold'>{project.title} </h1>
+                                    <p className='text-xs font-semibold text-gray-500'>
+                                        {project.description}
+                                    </p>
 
-                                        {
-                                            project.admin && <p className='font-bold text-red-800'>Contains with Admin panel </p>
-                                        }
-                                        <a rel='noreferrer' href={project.liveLink} target='_blank' className='btn bg-orange-600 text-white hover:text-black mt-3'>
-                                            Live Link <FaExternalLinkAlt />
-                                        </a>
-                                    </div>
+                                    {
+                                        project.admin && <p className='font-bold text-red-800'>Contains with Admin panel </p>
+                                    }
+                                    <a rel='noreferrer' href={project.liveLink} target='_blank' className='btn bg-orange-600 text-white hover:text-black mt-3'>
+                                        Live Link <FaExternalLinkAlt />
+                                    </a>
                                 </div>
+                            </div>
 
-                            </SwiperSlide>
-                        </>)
+                        </SwiperSlide>
+                    </>)
+                }
+                {
+                    selected?.name === 'Redux Projects' &&
+                    <>
+                        <div className='flex justify-center my-12 '>
+                            <p className='text-5xl font-bold animate-bounce'>Projects Comming Soon</p>
+                        </div>
+                    </>
                 }
 
 
@@ -231,7 +254,7 @@ const Projects = () => {
 
             </Swiper>
 
-        </div>
+        </div >
     );
 };
 

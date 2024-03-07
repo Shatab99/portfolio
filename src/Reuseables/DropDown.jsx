@@ -8,6 +8,7 @@ const people = [
     { name: 'Frontend Projects' },
     { name: 'Backend Projects' },
     { name: 'UiUx Design' },
+    { name: 'Redux Projects' },
 ]
 
 
