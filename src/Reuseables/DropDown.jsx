@@ -7,7 +7,7 @@ const people = [
     { name: 'Full Stack Projects' },
     { name: 'Frontend Projects' },
     { name: 'Backend Projects' },
-    { name: 'UiUx Design' },
+    { name: 'UiUx Design & Graphics' },
     { name: 'Redux Projects' },
 ]
 

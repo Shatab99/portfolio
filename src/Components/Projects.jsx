@@ -5,6 +5,7 @@ import web3 from '../assets/images/webpage3.png'
 import web4 from '../assets/images/webpage4.png'
 import uiUxImg from '../assets/images/Uiux-1.png'
 import uiUxImg2 from '../assets/images/Uiux-2.png'
+import uiUxImg3 from '../assets/images/Uiux-3.png'
 import frontEndImg1 from '../assets/images/frontEndImg1.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
 // Import Swiper React components
@@ -59,7 +60,7 @@ const projects = [
     },
     {
         title: 'Ride Share App -UiUx Design ',
-        category: 'UiUx Design',
+        category: 'UiUx Design & Graphics',
         description: "Designing a ride-share app in Figma involves creating a cohesive user experience across various screens, including the homepage, sign-up/sign-in, dashboard, search and booking, driver profiles, ride tracking, payment, notifications, settings, and help/support sections. Each screen should prioritize simplicity, clarity, and ease of use, with consistent design elements such as color schemes, typography, and iconography. User testing and iterative improvements are crucial to ensure that the app meets the needs of its users effectively.",
         admin: false,
         img: uiUxImg,
@@ -67,7 +68,7 @@ const projects = [
     },
     {
         title: 'Online Restaurent -UiUx Design ',
-        category: 'UiUx Design',
+        category: 'UiUx Design & Graphics',
         description: "Designing an online restaurant management system in Figma involves a comprehensive approach to address the diverse needs of restaurant owners, staff, and customers. At the heart of the system lies an intuitive dashboard accessible to restaurant managers, providing a centralized hub for overseeing various aspects of operations. This dashboard typically includes modules for order management, inventory tracking, staff scheduling, and financial reporting. Each module should offer clear visual representations of data, enabling quick decision-making and efficient resource allocation.",
         admin: false,
         img: uiUxImg2,
@@ -89,6 +90,14 @@ const projects = [
         img: frontEndImg1,
         liveLink: 'http://five-building.surge.sh/'
     },
+    {
+        title: 'Card Design - Graphics work ',
+        category: 'UiUx Design & Graphics',
+        description: "In the competitive landscape of modern business, a strong professional identity is essential for success. One powerful tool in establishing this identity is the humble business card. These small but mighty cards serve as a tangible representation of one's brand, personality, and expertise. As a testament to my dedication to crafting compelling professional identities, I recently undertook the task of designing 50 unique business cards using Canva.",
+        admin: false,
+        img: uiUxImg3,
+        liveLink: 'https://www.figma.com/file/02vxQBFWaagYxZtPT07q68/Business-card--demo?type=design&node-id=0%3A1&mode=design&t=oSqZKV5HAi2yFjSQ-1'
+    },
 ]
 
 const Projects = () => {
@@ -100,8 +109,8 @@ const Projects = () => {
     const fullStacks = projects.filter(project => project.category === 'Full Stack Projects')
     const frontEnds = projects.filter(project => project.category === 'Frontend Projects')
     const backEnds = projects.filter(project => project.category === 'Backend Projects')
-    const uiUx = projects.filter(project => project.category === 'UiUx Design')
-    const redux = projects.filter(project => project.category === 'Redux Projects')
+    const uiUx = projects.filter(project => project.category === 'UiUx Design & Graphics')
+    // const redux = projects.filter(project => project.category === 'Redux Projects')
 
 
     return (
@@ -210,7 +219,7 @@ const Projects = () => {
                         </>)
                 }
                 {
-                    selected?.name === 'UiUx Design' &&
+                    selected?.name === 'UiUx Design & Graphics' &&
                     uiUx?.map(project => <>
                         <SwiperSlide>
                             <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
