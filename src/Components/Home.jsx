@@ -12,13 +12,33 @@ import Exprerience from "./Exprerience";
 import FixedBg from "./FixedBg";
 import WelcomeModal from "./WelcomeModal";
 import WelcomeLoading from "./WelcomeLoading";
+import BackToTop from "./BackToTop";
 
 
 const Home = () => {
     const [top, setTop] = useState(false)
+    const [showTop , setShowTop]= useState(false)
+    
+    // setTimeout=>
+
 
     useEffect(() => {
         Aos.init();
+        const handleScroll = ()=>{
+            if(window.scrollY > 700 ){
+                setShowTop(true)
+            }
+            else{
+                setShowTop(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return ()=>{
+            window.removeEventListener('scroll', handleScroll)
+        }
+
     }, [])
 
     return (
@@ -34,6 +54,7 @@ const Home = () => {
                 <Projects />
                 <Footer />
                 <FixedBg />
+                {showTop && <BackToTop/>}
             </Navbar>
         </div>
     );
