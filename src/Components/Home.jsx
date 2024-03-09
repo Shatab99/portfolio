@@ -13,11 +13,13 @@ import FixedBg from "./FixedBg";
 import WelcomeModal from "./WelcomeModal";
 import WelcomeLoading from "./WelcomeLoading";
 import BackToTop from "./BackToTop";
+import Social from "./Social";
 
 
 const Home = () => {
     const [top, setTop] = useState(false)
     const [showTop , setShowTop]= useState(false)
+    const [showSocial, setShowSocial] = useState(false)
     
     // setTimeout=>
 
@@ -27,9 +29,11 @@ const Home = () => {
         const handleScroll = ()=>{
             if(window.scrollY > 700 ){
                 setShowTop(true)
+                setShowSocial(true)
             }
             else{
                 setShowTop(false)
+                setShowSocial(false)
             }
         }
 
@@ -55,6 +59,7 @@ const Home = () => {
                 <Footer />
                 <FixedBg />
                 {showTop && <BackToTop/>}
+                {showSocial && <Social/>}
             </Navbar>
         </div>
     );
