@@ -1,13 +1,14 @@
 import Lottie from "lottie-react";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import welComeLoading from '../assets/animation/welcome-Screen.json'
+import welcomeBanner from '../assets/images/welcome-banner.png'
 
 
 
 const WelcomeLoading = ({ top, setTop }) => {
 
     return (
-        <div className={`min-h-screen  transition-all duration-1000 z-50 ease-in flex items-center justify-center bg-yellow-100 fixed 
+        <div style={{backgroundImage : `url(${welcomeBanner})`, backgroundSize: 'cover'}} className={`min-h-screen  transition-all duration-1000 z-50 ease-in flex items-center justify-center bg-yellow-100 fixed 
         ${top ? 'top-[-900px] w-full ' : 'top-0 w-full overflow-y-auto '
             }
         `}>
@@ -27,7 +28,7 @@ const WelcomeLoading = ({ top, setTop }) => {
                 >
                     <div className="text-4xl text-center lg:text-left lg:text-[50px] font-bold flex flex-col gap-5">
                         <h1>Hi There, Welcome To My </h1>
-                        <span className="text-orange-500">Portfolio</span>
+                        <span className="text-orange-700">Portfolio</span>
                     </div>
                     <button onClick={() => {
                         setTop(true)
