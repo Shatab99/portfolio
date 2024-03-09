@@ -8,7 +8,7 @@ import welcomeBanner from '../assets/images/welcome-banner.png'
 const WelcomeLoading = ({ top, setTop }) => {
 
     return (
-        <div style={{backgroundImage : `url(${welcomeBanner})`, backgroundSize: 'cover'}} className={`min-h-screen  transition-all duration-1000 z-50 ease-in flex items-center justify-center bg-yellow-100 fixed 
+        <div style={{backgroundImage : `url(${welcomeBanner})`, backgroundSize: 'cover'}} className={`min-h-screen transition-all duration-1000 z-50 ease-in flex items-center justify-center bg-yellow-100 fixed 
         ${top ? 'top-[-900px] w-full ' : 'top-0 w-full overflow-y-auto '
             }
         `}>

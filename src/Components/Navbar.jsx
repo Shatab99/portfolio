@@ -31,7 +31,7 @@ const Navbar = ({ children }) => {
                     </div>
                     <div className="justify-end">
                         {/*  */}
-                        <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn bg-orange-600 text-white hover:text-black border-0"><FaUserTie className="text-lg"/> Hire Me </button>
+                        <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn btn-sm transition-all duration-700 bg-orange-600 text-white hover:bg-orange-700 border-0 flex gap-2 hover:gap-4"><FaUserTie className="text-lg"/> Hire Me </button>
                         <HireMeForm/>
                     </div>
                 </div>
