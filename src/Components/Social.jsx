@@ -7,7 +7,7 @@ const Social = () => {
 
 
     return (
-        <div className="grid grid-cols-1 gap-4 fixed right-28 top-[40%]">
+        <div className="grid grid-cols-1 gap-4 fixed right-8 top-[40%]">
             <a rel="noreferrer" href="https://www.instagram.com/_shatab_/" target="_blank" className="">
                 <FaInstagramSquare className="text-3xl hover:text-5xl transition-all duration-500 " />
             </a>
