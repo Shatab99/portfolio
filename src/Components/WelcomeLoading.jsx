@@ -9,7 +9,7 @@ const WelcomeLoading = ({ top, setTop }) => {
 
     return (
         <div style={{backgroundImage : `url(${welcomeBanner})`, backgroundSize: 'cover'}} className={`min-h-screen transition-all duration-1000 z-50 ease-in flex items-center justify-center bg-yellow-100 fixed 
-        ${top ? 'top-[-900px] w-full ' : 'top-0 w-full overflow-y-auto '
+        ${top ? 'top-[-2900px] w-full ' : 'top-0 w-full overflow-y-auto '
             }
         `}>
             <div className="flex flex-col lg:flex-row items-center justify-center ">
