@@ -11,7 +11,7 @@ const Social = () => {
             <a rel="noreferrer" href="https://www.instagram.com/_shatab_/" target="_blank" className="">
                 <FaInstagramSquare className="text-3xl hover:text-5xl transition-all duration-500 " />
             </a>
-            <a rel="noreferrer" href="https://www.linkedin.com/in/s-shatab-489811180/" target="_blank"><FaLinkedin className="text-3xl hover:text-5xl transition-all duration-500 " /></a>
+            <a rel="noreferrer" href="https://www.linkedin.com/in/md-shahriar-shatab-489811180/" target="_blank"><FaLinkedin className="text-3xl hover:text-5xl transition-all duration-500 " /></a>
             <a rel="noreferrer" href="https://github.com/Shatab99" target="_blank"><FaGithub className="text-3xl hover:text-5xl transition-all duration-500 " /></a>
 
         </div>
