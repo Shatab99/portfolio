@@ -2,6 +2,9 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiMongodb } from "react-icons/si";
+import pythonLogo from "../assets/images/Python-Logo.png"
+import mongooseLogo from "../assets/images/mongose-logo.png"
+import { SiTypescript } from "react-icons/si";
 
 const data = [
     {
@@ -24,7 +27,13 @@ const data = [
     },
     {
         name: 'Javasript',
-        uv: 30,
+        uv: 60,
+        pv: 3908,
+        amt: 2000,
+    },
+    {
+        name: 'Typesript',
+        uv: 50,
         pv: 3908,
         amt: 2000,
     },
@@ -46,6 +55,12 @@ const data = [
         pv: 4300,
         amt: 2100,
     },
+    {
+        name: 'Python ',
+        uv: 30,
+        pv: 4300,
+        amt: 2100,
+    },
 ];
 
 
@@ -53,12 +68,12 @@ const Skills = () => {
 
 
     return (
-        <div id="skills" className="my-12 max-w-xs lg:max-w-4xl mx-auto">
+        <div id="skills" className="my-12 max-w-xs lg:max-w-5xl mx-auto">
             <h1 className="text-3xl font-semibold text-center mb-10">My Skills</h1>
-            <div className=''>
+            <div className='flex justify-center'>
                 {/* for pc */}
                 <AreaChart
-                    width={600}
+                    width={900}
                     height={300}
                     data={data}
                     margin={{
@@ -119,6 +134,18 @@ const Skills = () => {
                 <div className='flex flex-col items-center'>
                     <SiMongodb className='text-6xl text-green-600' />
                     <p>MongoDB</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <SiTypescript className='text-6xl text-blue-600' />
+                    <p>MongoDB</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <img src={pythonLogo} alt="" className='w-16'/>
+                    <p>Python</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <img src={mongooseLogo} alt="" className='w-28' />
+                    <p>Mongoose</p>
                 </div>
 
             </div>
