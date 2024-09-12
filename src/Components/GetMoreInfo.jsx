@@ -28,8 +28,8 @@ const GetMoreInfo = ({showMoreInfo}) => {
                     Do you want to explore more about me ? 
                 </h1>
                 <div className="flex items-center gap-6">
-                    <a rel="noreferrer" href="https://github.com/Shatab99" target="_blank" className="btn btn-sm bg-orange-600 text-white hover:bg-orange-700 flex gap-2 transition-all duration-700 hover:gap-4 ">Yes, I want to </a>
-                    <button onClick={()=>setIsOpen(false)} className="btn btn-sm btn-outline text-orange-600 hover:bg-orange-600 hover:border-orange-600  transition-all duration-1000">No, I {`don't`} want to</button>
+                    <a  onClick={()=>setIsOpen(false)} rel="noreferrer" href="https://github.com/Shatab99" target="_blank" className="btn btn-sm bg-green-700 text-white hover:bg-green-900 flex gap-2 transition-all duration-700 hover:gap-4 ">Yes, I want to </a>
+                    <button onClick={()=>setIsOpen(false)} className="btn btn-sm btn-outline text-orange-600 hover:bg-red-600 hover:border-red-600  transition-all duration-1000">No, I {`don't`} want to</button>
                 </div>
                 </div>
             </Modal>
