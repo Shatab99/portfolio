@@ -23,7 +23,7 @@ const Banner = () => {
                             ]}
                             typeSpeed={60}
                         /></h1>
-                        <p className="py-6 text-lg font-semibold"><span className='text-orange-600 font-extrabold'>Full</span>  Stack Developer</p>
+                        <p className="py-6 text-lg font-semibold"><span className='text-orange-600 font-extrabold'>Full</span>  Stack Web Application Developer</p>
                         <div className='flex items-center gap-4'>
                             <a href={cv} download={cv} className="btn bg-orange-600 text-white hover:bg-orange-700 flex gap-2 transition-all duration-700 hover:gap-4">Download CV <FaShareFromSquare className='text-lg' /></a>
                             <a rel='noreferrer' href='https://drive.google.com/file/d/17fo5Af-E8w4L_gfQGDvO6Ry7G_VMFVbQ/view?usp=sharing' target='_blank' className='btn btn-outline text-orange-600 hover:bg-orange-600 hover:border-orange-600  transition-all duration-1000'>
