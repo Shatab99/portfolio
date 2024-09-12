@@ -104,7 +104,7 @@ const projects = [
         title: 'Online University ',
         category: 'Backend Projects',
         description: "Online University Management System is a comprehensive platform designed to streamline and automate the administration of university activities. This system provides a centralized solution for managing academic processes, student data, faculty information, and administrative tasks. With features like student registration, course management, attendance tracking, and fee management, it enhances efficiency and reduces manual workloads.",
-        admin: true,
+        admin: false,
         img: onlineUni,
         liveLink: 'https://github.com/Shatab99/Student-University-With-TS.git'
     },
@@ -112,7 +112,7 @@ const projects = [
         title: 'Bike Rental Service ',
         category: 'Backend Projects',
         description: "Bike Rental Service provides users with the convenience of renting bicycles for short-term use, offering an eco-friendly and affordable transportation alternative. This service caters to both locals and tourists who want to explore a city or get from one place to another without owning a bike.",
-        admin: true,
+        admin: false,
         img: bikeRent,
         liveLink: 'https://github.com/Shatab99/Bike-service-ts.git'
     },
@@ -128,7 +128,6 @@ const Projects = () => {
     const frontEnds = projects.filter(project => project.category === 'Frontend Projects')
     const backEnds = projects.filter(project => project.category === 'Backend Projects')
     const uiUx = projects.filter(project => project.category === 'UiUx Design & Graphics')
-    // const redux = projects.filter(project => project.category === 'Redux Projects')
 
 
     return (
@@ -204,9 +203,6 @@ const Projects = () => {
                 }
                 {
                     selected?.name === 'Backend Projects' &&
-                        backEnds.length === 0 ? <div className='flex justify-center my-12 '>
-                        <p className='text-5xl font-bold animate-bounce'>Projects Comming Soon</p>
-                    </div> :
                         backEnds?.map(project => <>
                             <SwiperSlide>
                                 <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row p-6 shadow-xl items-center justify-center"
@@ -266,14 +262,6 @@ const Projects = () => {
 
                         </SwiperSlide>
                     </>)
-                }
-                {
-                    selected?.name === 'Redux Projects' &&
-                    <>
-                        <div className='flex justify-center my-12 '>
-                            <p className='text-5xl font-bold animate-bounce'>Projects Comming Soon</p>
-                        </div>
-                    </>
                 }
 
 

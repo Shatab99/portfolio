@@ -137,7 +137,7 @@ const Skills = () => {
                 </div>
                 <div className='flex flex-col items-center'>
                     <SiTypescript className='text-6xl text-blue-600' />
-                    <p>MongoDB</p>
+                    <p>Type Script</p>
                 </div>
                 <div className='flex flex-col items-center'>
                     <img src={pythonLogo} alt="" className='w-16'/>
