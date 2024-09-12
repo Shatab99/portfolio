@@ -14,12 +14,14 @@ import WelcomeModal from "./WelcomeModal";
 import WelcomeLoading from "./WelcomeLoading";
 import BackToTop from "./BackToTop";
 import Social from "./Social";
+import GetMoreInfo from "./GetMoreInfo";
 
 
 const Home = () => {
     const [top, setTop] = useState(false)
     const [showTop , setShowTop]= useState(false)
     const [showSocial, setShowSocial] = useState(false)
+    const [showMoreInfo , setShowMoreInfo]= useState(false)
     
     // setTimeout=>
 
@@ -49,7 +51,8 @@ const Home = () => {
         <div>
             <Navbar>
                 <WelcomeLoading setTop={setTop} top={top}/>
-                <WelcomeModal top={top}/>
+                <WelcomeModal setShowMoreInfo={setShowMoreInfo} top={top}/>
+                <GetMoreInfo showMoreInfo={showMoreInfo}/>
                 <Banner />
                 <About />
                 <Exprerience />

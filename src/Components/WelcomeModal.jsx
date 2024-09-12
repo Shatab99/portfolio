@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-export default function WelcomeModal({top}) {
+export default function WelcomeModal({top, setShowMoreInfo}) {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -38,9 +38,11 @@ export default function WelcomeModal({top}) {
                                 <button onClick={() => {
                                     document.getElementById('my_modal_3').showModal();
                                     setIsOpen(false);
+                                    setShowMoreInfo(true)
                                 }} className="btn btn-sm bg-orange-600 text-white hover:text-black border-0"><FaUserTie className="text-lg" /> Hire Me </button>
                                 <button onClick={() => {
                                     setIsOpen(false);
+                                    setShowMoreInfo(true)
                                 }} className="btn btn-sm btn-outline text-orange-600   border-2">May Be later ! </button>
 
                             </div>
