@@ -43,7 +43,7 @@ const Footer = () => {
                     <a rel="noreferrer" href="https://www.instagram.com/_shatab_/" target="_blank">
                         <FaInstagramSquare className="text-6xl" />
                     </a>
-                    <a  rel="noreferrer" href="https://www.linkedin.com/in/s-shatab-489811180/" target="_blank"><FaLinkedin className="text-6xl" /></a>
+                    <a  rel="noreferrer" href="https://www.linkedin.com/in/md-shahriar-shatab-489811180/" target="_blank"><FaLinkedin className="text-6xl" /></a>
                     <a rel="noreferrer" href="https://github.com/Shatab99" target="_blank"><FaGithub className="text-6xl" /></a>
 
                 </div>

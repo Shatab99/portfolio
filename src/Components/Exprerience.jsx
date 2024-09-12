@@ -46,7 +46,7 @@ const Exprerience = () => {
             <h1 className="text-3xl font-bold text-center ">My Experience </h1>
             <div className="border-4 border-[#FFBE00] p-4 rounded-lg flex flex-col items-center gap-6 shadow-2xl ">
                 <div className="border-2 border-[#FFDE7F] p-4 rounded-lg flex flex-col items-center gap-3">
-                    <p className="font-semibold">My Running Experience In <span className="font-bold text-[#EA580C]">MERN </span>Stack</p>
+                    <p className="font-semibold">My Running Experience In <span className="font-bold text-[#EA580C]">Full </span>Stack</p>
                     <p className="text-2xl font-bold">
                         <span className="text-purple-800 text-4xl">{timeDifference.yearsDiff}</span> Years <span className="text-4xl text-[#D0410C]">{timeDifference.monthsDiff}</span> Months <span className="text-4xl text-purple-800">{timeDifference.daysDiff}</span> Days <span className="text-4xl text-[#D0410C]">{timeDifference.hoursDiff}</span> Hours <span className="text-4xl text-purple-800">{timeDifference.minsDiff}</span> Mins <span className="text-4xl text-[#D0410C]">{timeDifference.secsDiff}</span> Secs
                     </p>

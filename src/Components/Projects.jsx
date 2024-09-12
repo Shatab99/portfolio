@@ -7,6 +7,8 @@ import uiUxImg from '../assets/images/Uiux-1.png'
 import uiUxImg2 from '../assets/images/Uiux-2.png'
 import uiUxImg3 from '../assets/images/Uiux-3.png'
 import frontEndImg1 from '../assets/images/frontEndImg1.png'
+import onlineUni from '../assets/images/OnlineUniversity.png'
+import bikeRent from '../assets/images/BikeRent.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -97,6 +99,22 @@ const projects = [
         admin: false,
         img: uiUxImg3,
         liveLink: 'https://www.figma.com/file/02vxQBFWaagYxZtPT07q68/Business-card--demo?type=design&node-id=0%3A1&mode=design&t=oSqZKV5HAi2yFjSQ-1'
+    },
+    {
+        title: 'Online University ',
+        category: 'Backend Projects',
+        description: "Online University Management System is a comprehensive platform designed to streamline and automate the administration of university activities. This system provides a centralized solution for managing academic processes, student data, faculty information, and administrative tasks. With features like student registration, course management, attendance tracking, and fee management, it enhances efficiency and reduces manual workloads.",
+        admin: true,
+        img: onlineUni,
+        liveLink: 'https://github.com/Shatab99/Student-University-With-TS.git'
+    },
+    {
+        title: 'Bike Rental Service ',
+        category: 'Backend Projects',
+        description: "Bike Rental Service provides users with the convenience of renting bicycles for short-term use, offering an eco-friendly and affordable transportation alternative. This service caters to both locals and tourists who want to explore a city or get from one place to another without owning a bike.",
+        admin: true,
+        img: bikeRent,
+        liveLink: 'https://github.com/Shatab99/Bike-service-ts.git'
     },
 ]
 
