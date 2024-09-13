@@ -1,45 +1,72 @@
-
+import { useState, useEffect } from 'react';
 
 const PrgressBar = () => {
+    const [skills] = useState([
+        { title: 'HTML', percent: 95 },
+        { title: 'CSS', percent: 70 },
+        { title: 'Tailwind CSS', percent: 90 },
+        { title: 'React', percent: 80 },
+        { title: 'JavaScript', percent: 80 },
+        { title: 'TypeScript', percent: 85 },
+        { title: 'Node JS', percent: 65 },
+        { title: 'Express JS', percent: 85 },
+        { title: 'MongoDB', percent: 75 },
+        { title: 'Python', percent: 75 },
+    ]);
+
+    const [currentSkill, setCurrentSkill] = useState(skills[0]);
+    const [circumference, setCircumference] = useState(2 * Math.PI * 120);
+
+    useEffect(() => {
+        setCircumference(2 * Math.PI * 120);
+    }, []);
+
     return (
-        <div className="max-w-4xl p-12 mx-auto shadow-2xl mb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">TypeScript</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "85", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">85%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">Python</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "75", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">75%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">Mongoose</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "85", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">85%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">React</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "80", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">80%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">Express</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "90", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">90%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">MongoDB</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "85", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">85%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">HTML</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "60", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">60%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">Tailwind CSS</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "80", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">80%</div>
-            </div>
-            <div className="flex flex-col-reverse gap-4 items-center justify-between w-full">
-                <h1 className="text-xl font-bold ">Javasript</h1>
-                <div className="radial-progress text-orange-600" style={{ "--value": "90", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">90%</div>
-            </div>
-        </div>
+        <main className="grid text-[#C2410C] place-content-center">
+            <section className="p-6 space-y-6 rounded-xl md:grid md:grid-cols-2 md:gap-4 sm:space-y-0">
+
+                <div className="flex items-center justify-center">
+                    <svg className="transform -rotate-90 w-72 h-72">
+                        <circle
+                            cx="145"
+                            cy="145"
+                            r="120"
+                            stroke="currentColor"
+                            strokeWidth="30"
+                            fill="transparent"
+                            className="text-[#FDD6A9]"
+                        />
+                        <circle
+                            cx="145"
+                            cy="145"
+                            r="120"
+                            stroke="currentColor"
+                            strokeWidth="30"
+                            fill="transparent"
+                            strokeDasharray={circumference}
+                            strokeDashoffset={circumference - (currentSkill.percent / 100) * circumference}
+                            className="text-[#EA580C] transition-all duration-1000 ease-out"
+                        />
+                    </svg>
+                    <span className="absolute text-5xl">{`${currentSkill.percent}%`}</span>
+                </div>
+
+                <div className="flex flex-col items-center  lg:grid lg:grid-cols-2 gap-4">
+
+                    {skills.map((skill, index) => (
+                        <button
+                            key={index}
+                            className={`btn btn-sm  text-[#EA580C] hover:border-[#EA580C] hover:bg-[#C2410C] ${currentSkill.title === skill.title ? 'font-bold bg-[#C2410C] text-white' : 'btn-outline'
+                                }`}
+                            onClick={() => setCurrentSkill(skill)}
+                        >
+                            {skill.title}
+                        </button>
+                    ))}
+                </div>
+
+            </section>
+        </main>
     );
 };
 
