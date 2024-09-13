@@ -6,15 +6,15 @@ const PrgressBar = () => {
         { title: 'CSS', percent: 70 },
         { title: 'Tailwind CSS', percent: 90 },
         { title: 'React', percent: 80 },
-        { title: 'JavaScript', percent: 80 },
+        { title: 'JavaScript', percent: 83 },
         { title: 'TypeScript', percent: 85 },
-        { title: 'Node JS', percent: 65 },
-        { title: 'Express JS', percent: 85 },
-        { title: 'MongoDB', percent: 75 },
+        { title: 'Node JS', percent: 73 },
+        { title: 'Express JS', percent: 88 },
+        { title: 'MongoDB', percent: 82 },
         { title: 'Python', percent: 75 },
     ]);
 
-    const [currentSkill, setCurrentSkill] = useState(skills[0]);
+    const [currentSkill, setCurrentSkill] = useState(null);
     const [circumference, setCircumference] = useState(2 * Math.PI * 120);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const PrgressBar = () => {
 
     return (
         <main className="grid text-[#C2410C] place-content-center">
-            <section className="p-6 space-y-6 rounded-xl md:grid md:grid-cols-2 md:gap-4 sm:space-y-0">
+            <section className="mb-6 p-2 space-y-6 rounded-xl md:grid md:grid-cols-2 md:gap-4 sm:space-y-0">
 
                 <div className="flex items-center justify-center">
                     <svg className="transform -rotate-90 w-72 h-72">
@@ -44,11 +44,11 @@ const PrgressBar = () => {
                             strokeWidth="30"
                             fill="transparent"
                             strokeDasharray={circumference}
-                            strokeDashoffset={circumference - (currentSkill.percent / 100) * circumference}
+                            strokeDashoffset={currentSkill ? circumference - (currentSkill.percent / 100) * circumference : 0}
                             className="text-[#EA580C] transition-all duration-1000 ease-out"
                         />
                     </svg>
-                    <span className="absolute text-5xl">{`${currentSkill.percent}%`}</span>
+                    <span className={`absolute ${currentSkill ? "text-5xl" : 'text-xl'}`}>{`${currentSkill? currentSkill.percent : "Click to Check"}%`}</span>
                 </div>
 
                 <div className="flex flex-col items-center  lg:grid lg:grid-cols-2 gap-4">
@@ -56,7 +56,7 @@ const PrgressBar = () => {
                     {skills.map((skill, index) => (
                         <button
                             key={index}
-                            className={`btn btn-sm  text-[#EA580C] hover:border-[#EA580C] hover:bg-[#C2410C] ${currentSkill.title === skill.title ? 'font-bold bg-[#C2410C] text-white' : 'btn-outline'
+                            className={`btn btn-sm  text-[#EA580C] hover:border-[#EA580C] hover:bg-[#C2410C] ${currentSkill?.title === skill?.title ? 'font-bold bg-[#C2410C] text-white' : 'btn-outline'
                                 }`}
                             onClick={() => setCurrentSkill(skill)}
                         >

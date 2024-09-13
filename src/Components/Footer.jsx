@@ -18,7 +18,7 @@ const Footer = () => {
               Swal.fire({
                 position: "center",
                 icon: "success",
-                background: 'black',
+                background: 'white',
                 title: "Email sent ! Relax I will respond .",
                 showConfirmButton: false,
                 timer: 2000
