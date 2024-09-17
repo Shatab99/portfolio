@@ -30,7 +30,7 @@ export default function WelcomeModal({top, setShowMoreInfo}) {
                     <h1 className="text-2xl font-semibold text-center">Hi There, Welcome to my portfolio</h1>
                     <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-4">
                         <div className="leading-7" data-aos="zoom-out-up" data-aos-duration="2000">
-                            <p>As a junior MERN Stack developer , I can offer you to build you SPA{'(Single Page Application)'} project .</p>
+                            <p>As a software engineer , I can offer you to build you SPA{'(Single Page Application)'} or any full stack project .</p>
                             <p>So , we can have a cup of coffee on google meet . You can  <a onClick={() => {
                                 setIsOpen(false);
                             }} href="#footer" className="font-semibold text-orange-600 hover:text-orange-800">contact me clicking here</a> through  filling the contact me form .</p> <span className="font-semibold">Thank you ❤🧡</span>
