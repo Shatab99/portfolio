@@ -13,8 +13,7 @@ const About = () => {
                 <div className='max-w-xs'>
                     <h1 className="text-3xl font-bold">About <span className='text-orange-700'>Me</span></h1>
                     <div className="divider my-0"></div>
-                    <p className='text-gray-600 font-semibold' >Hi , I am Md Shahriar Shatab.Basicaly I am a Full Stack developer . I usualy design in React for front end . For Backend I use express and mongo db . My vision is to be a good and honest person.
-                     I have a great dedication in this sector and I try to make myself in discipline .</p>
+                    <p className='text-gray-600 font-semibold' >I am a dedicated Software Engineer with nearly 2 years of experience in full-stack development, proficient in HTML, CSS, JavaScript, TypeScript, Node.js, Express, Mongoose, and React. I specialize in building scalable and efficient web applications with a focus on delivering exceptional user experiences. My experience spans both front-end and back-end development, and I’m passionate about solving complex problems and continuously learning new technologies to stay ahead in the fast-evolving tech landscape.</p>
                 </div>
             </div>
         </div>
