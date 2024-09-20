@@ -10,6 +10,7 @@ import frontEndImg1 from '../assets/images/frontEndImg1.png'
 import onlineUni from '../assets/images/OnlineUniversity.png'
 import bikeRent from '../assets/images/BikeRent.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { IoHomeOutline } from "react-icons/io5";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -118,11 +119,9 @@ const projects = [
     },
 ]
 
-const Projects = () => {
+const Projects = ({setLeft}) => {
 
     const [selected, setSelected] = useState(people[0])
-
-    console.log(selected?.name)
 
     const fullStacks = projects.filter(project => project.category === 'Full Stack Projects')
     const frontEnds = projects.filter(project => project.category === 'Frontend Projects')
@@ -132,9 +131,10 @@ const Projects = () => {
 
     return (
         <div id="projects" className="max-w-xs lg:max-w-4xl mx-auto mb-12 mt-4 w-full">
-            <div className='flex items-center justify-between '>
-                <h1 className="text-3xl font-semibold">My Projects</h1>
+            <div className='flex flex-col lg:flex-row gap-4 items-center justify-between '>
                 <DropDown selected={selected} setSelected={setSelected} />
+                <h1 className="hidden lg:block text-3xl font-semibold">My Projects</h1>
+                <button onClick={()=>setLeft(true)} className='btn btn-sm btn-outline btn-wide text-red-500 hover:bg-red-700 hover:border-0'><IoHomeOutline className='text-lg'/>Back to home</button>
             </div>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 

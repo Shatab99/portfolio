@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import Skills from "./Skills";
-import Projects from "./Projects";
 import Footer from "./Footer";
 import PrgressBar from "./PrgressBar";
 import Exprerience from "./Exprerience";
@@ -15,6 +14,7 @@ import WelcomeLoading from "./WelcomeLoading";
 import BackToTop from "./BackToTop";
 import Social from "./Social";
 import GetMoreInfo from "./GetMoreInfo";
+import ShowProjects from "./ShowProjects";
 
 
 const Home = () => {
@@ -22,6 +22,7 @@ const Home = () => {
     const [showTop , setShowTop]= useState(false)
     const [showSocial, setShowSocial] = useState(false)
     const [showMoreInfo , setShowMoreInfo]= useState(false)
+    const [left, setLeft]= useState(true)
     
     // setTimeout=>
 
@@ -49,8 +50,9 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar>
+            <Navbar setLeft={setLeft}>
                 <WelcomeLoading setTop={setTop} top={top}/>
+                <ShowProjects left ={left} setLeft={setLeft}/>
                 <WelcomeModal setShowMoreInfo={setShowMoreInfo} top={top}/>
                 <GetMoreInfo showMoreInfo={showMoreInfo}/>
                 <Banner />
@@ -58,7 +60,6 @@ const Home = () => {
                 <Exprerience />
                 <Skills />
                 <PrgressBar />
-                <Projects />
                 <Footer />
                 <FixedBg />
                 {showTop && <BackToTop/>}

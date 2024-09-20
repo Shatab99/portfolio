@@ -1,10 +1,10 @@
 // import axios from "axios";
 // import fileDownload from "js-file-download";
-
+import { GoProjectSymlink } from "react-icons/go";
 import { FaUserTie } from "react-icons/fa";
 import HireMeForm from "./HireMeForm";
 
-const Navbar = ({ children }) => {
+const Navbar = ({ children, setLeft }) => {
 
 
 
@@ -21,18 +21,13 @@ const Navbar = ({ children }) => {
                     </div>
                     <div className="flex-1 px-2 mx-2 text-3xl font-bold"><span className="text-orange-600">S</span>hatab</div>
                     <div className="flex-none hidden lg:block">
-                        <ul className="menu menu-horizontal">
-                            {/* Navbar menu content here */}
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                        </ul>
                     </div>
-                    <div className="justify-end">
+                    <div className="justify-end flex items-center gap-4">
+                        <button onClick={() => document.getElementById('my_modal_3').showModal()} className="btn btn-sm btn-outline transition-all duration-700 hover:bg-orange-600 text-orange-600  hover:border-orange-600 flex gap-2 hover:gap-4"><FaUserTie className="text-lg" /> Hire Me </button>
+                        <button onClick={() => setLeft(false)} className="btn btn-sm  hidden text-white transition-all duration-700 hover:bg-orange-700 border-0 bg-orange-600 lg:flex gap-2 hover:gap-4"><GoProjectSymlink className="text-lg" /> Show All Projects</button>
                         {/*  */}
-                        <button onClick={()=>document.getElementById('my_modal_3').showModal()} className="btn btn-sm transition-all duration-700 bg-orange-600 text-white hover:bg-orange-700 border-0 flex gap-2 hover:gap-4"><FaUserTie className="text-lg"/> Hire Me </button>
-                        <HireMeForm/>
+
+                        <HireMeForm />
                     </div>
                 </div>
                 {children}
@@ -44,7 +39,7 @@ const Navbar = ({ children }) => {
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a onClick={() => setLeft(false)} href="#projects">Projects</a></li>
                 </ul>
             </div>
         </div>
